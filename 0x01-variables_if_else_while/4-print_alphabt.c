@@ -1,22 +1,22 @@
 #include <stdio.h>
-#include <ctype.h>
 /**
-*main - Program to print alphabet letters except q and e followed by new line
-*
-*Return: return 0
-*/
+ * main - main block
+ * Description: Get a random number and check its last digit, compare it with 5
+ * Return: 0
+ */
 int main(void)
 {
-	int letter;
+	char c = 'a';
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	while (c <= 'z')
 	{
-		if (letter == 'q' || letter == 'e')
+		if (c != 'e' && c != 'q')
 		{
-			continue;
+			putchar(c);
 		}
-		putchar(letter);
+		c++;
 	}
+
 	putchar('\n');
 	return (0);
 }
